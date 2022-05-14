@@ -3,15 +3,17 @@
         <form name="contactForm" method="POST">             
             <div class="form-group" >
                 <label for="exampleInputEmail1">First Name</label>
-                <input type="text" class="form-control" id="fname" aria-describedby="nameHelp" name="fname">                
+                <input type="text" class="form-control"  aria-describedby="nameHelp" name="fname">                
             </div>
 
             <div class="form-group" >
                 <label for="exampleInputEmail1">Last Name</label>
-                <input type="text" class="form-control" id="#lastname" aria-describedby="nameHelp" name="lname">                
+                <input type="text" class="form-control" aria-describedby="nameHelp" name="lname">                
             </div>
 
-
+            <div class="form-group" >
+                <span id="lastname"></span>                
+            </div>
         
             <div class="form-group" >
                 <label for="exampleInputEmail1">Email address</label>
