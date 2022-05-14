@@ -9,27 +9,72 @@ $( document ).ready(function() {
         // The key name on the left side is the name attribute
         // of an input field. Validation rules are defined
         // on the right side
-         'cname' : {
-            required : true,
-            minlength: 5,
-            emptyCheck : true                       
-         },
+ 
+
+        'fname' : {
+          required : true,
+          minlength : 5,
+          emptyCheck : true
+       },
+       'lname' : {
+        required : true,
+        minlength : 5,
+        emptyCheck : true
+     },
+
+     groups: {
+      username: "fname lname"
+    },
+
+        
+        
+        // 'cname' : {
+        //     required : true,
+        //     minlength: 5,
+        //     emptyCheck : true                       
+        //  },
         'cemail': {
            required: true,
            email: true,
+         },
+         'cphoneNumber' : {
+           required : true,
+           digits : true,
          }
       },
 
       messages: {
-         'cname' : {
-            required : 'Please enter your name.',
-            minlength : 'The minimum length should be 5.',
-            emptyCheck : 'The feilds cannot be empty.'
-         },
+        username :{
+          required : 'Please enter your first name.',
+          minlength : 'The minimum length should be 5.',
+          emptyCheck : 'The feilds cannot be empty.'
+        },
+      //    'fname' : {
+      //       required : 'Please enter your first name.',
+      //       minlength : 'The minimum length should be 5.',
+      //       emptyCheck : 'The feilds cannot be empty.'
+      //    },
+      //    'lname' : {
+      //     required : 'Please enter your last name.',
+      //     minlength : 'The minimum length should be 5.',
+      //     emptyCheck : 'The feilds cannot be empty.'
+      //  },
          'cemail': {
            required: 'Please enter your email.',
            email: 'Please enter a valid email address.',
-         }    
+         },
+         'cphoneNumber' : {
+          required : "This is required.",
+          digits : "Digits only",
+        },
+        errorPlacement: function(error, element) {
+          if (element.attr("name") == "fname" || element.attr("name") == "lname" ) {
+            error.insertAfter("#lastname");
+          } else {
+            error.insertAfter(element);
+          }
+        },
+             
       },
 
       submitHandler: function(form) {        
