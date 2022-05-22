@@ -26,6 +26,9 @@ $(document).ready(function () {
         'cphoneNumber': {
           required: true,
           digits: true,
+        },
+        'selectFeild':{
+          selectcheck: true
         }
       },
 
@@ -34,7 +37,16 @@ $(document).ready(function () {
       },
 
       messages: {
-
+        'fname': {
+          required: "1",
+          minlength: "2",
+          emptyCheck: "3"
+        },
+        'lname': {
+          required: "4",
+          minlength: "5",
+          emptyCheck: "6"
+        },
        'cemail': {
           required: 'Please enter your email.',
           email: 'Please enter a valid email address.',
@@ -43,6 +55,9 @@ $(document).ready(function () {
           required: "This is required.",
           digits: "Digits only",
         },
+        'selectFeild':{
+          selectcheck: "Value must be 1"
+        }
 
       },
       errorPlacement: function (error, element) {
